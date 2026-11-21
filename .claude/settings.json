@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./studyo:*)",
+      "Bash(bash kurulum/kur_mac.sh)",
+      "Bash(powershell -ExecutionPolicy Bypass -File kurulum/kur_windows.ps1)",
+      "Bash(node comp/render.mjs:*)",
+      "Bash(ffmpeg:*)",
+      "Bash(ffprobe:*)",
+      "Bash(mkdir -p input/:*)",
+      "Bash(ls:*)",
+      "Bash(open input/:*)",
+      "Bash(open output/:*)",
+      "Bash(explorer.exe:*)"
+    ]
+  }
+}

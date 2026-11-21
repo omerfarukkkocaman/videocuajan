@@ -1,0 +1,2 @@
+/* emojili-3d: konuşan yüz motorun yüz katmanında değil, PR.frameCard (PR.headAnchor: tam ekran, saç üstü sabit) ile çizilir */
+#faceWrap { visibility: hidden; }

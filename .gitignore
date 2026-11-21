@@ -1,0 +1,22 @@
+# kullanıcı medyası ve çıktılar (asla repoya girmez)
+input/*
+!input/README.md
+output/*
+!output/.gitkeep
+projects/*
+!projects/.gitkeep
+# kullanıcının kendi markaları (örnek marka hariç)
+brands/*
+!brands/ornek/
+# ortam / önbellek
+.venv/
+.cache/
+.araclar/
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+# yayın öncesi tarama listesi (yerel; repoya girmez)
+.yasakli.txt
+.claude/settings.local.json

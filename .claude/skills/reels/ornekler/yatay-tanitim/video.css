@@ -1,0 +1,13 @@
+/* yatay-tanitim: platform görsel dili (koyu lacivert, mavi vurgu, Manrope). Bileşen stilleri comp/topluluk.js'te (TP). */
+@font-face { font-family: "Manrope"; src: url("../../assets/fonts/Manrope.ttf") format("truetype"); font-weight: 200 800; }
+
+/* altyazı: Manrope, marka lacivert zemin */
+#cap { font-family: "Manrope", "Mont", sans-serif; }
+#cap.s2 { letter-spacing: -.1px; }
+#cap.s2 .bgl { background: rgba(7, 10, 18, .74); }
+
+/* gizli sahne zemini: panel arka planı (koyu lacivert, üstte mavi ışık, seyrek nokta ızgara) */
+#bg { background: radial-gradient(70% 55% at 62% 0%, rgba(43,127,217,.22), rgba(43,127,217,0) 72%),
+                  radial-gradient(50% 50% at 0% 100%, rgba(43,127,217,.10), rgba(43,127,217,0) 70%),
+                  linear-gradient(180deg, #0A1122 0%, #070A12 100%); }
+#bg::after { background-image: radial-gradient(rgba(191,227,255,.10) 1.1px, transparent 1.6px); background-size: 46px 46px; background-position: 23px 23px; }

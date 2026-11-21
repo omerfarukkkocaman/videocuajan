@@ -1,0 +1,21 @@
+/* editoryal-premium — derin lacivert/siyah, sıcak altın, kırık beyaz; ince çizgiler, bol boşluk */
+:root { --gold: #C9A45C; --ivory: #F4F1EA; --ink0: #070C15; }
+/* gizli sahne zemini: ızgarasız, ışık üstten, kenarlar siyaha yakın */
+#bg { background: radial-gradient(120% 72% at 50% 30%, #11253B 0%, #0B1828 46%, #070C15 100%); }
+#bg::after { background-image: none; }
+/* altyazı: sade, iri; daha ince ağırlık ve sakin koyu zemin */
+#cap.s2 { font-weight: 700; letter-spacing: 0; }
+#cap.s2 .bgl { background: rgba(6, 10, 18, .6); border-radius: .3em; padding: .12em .5em; }
+#cap.s2 .cw { text-shadow: 0 2px 10px rgba(0, 0, 0, .35); }
+/* açık, sıcak altın yazılar (koyu zemin üstünde >= 4.5:1) + hafif gölge */
+.c-cover .cvK, .c-cover .cvAT, .c-chap .chN, .c-cut .cuLbl, .c-lt .ltNum { color: #E2C27A; }
+.c-cover .cvK i { background: #E2C27A; }
+.c-cover .cvAT { text-shadow: 0 2px 14px rgba(0, 0, 0, .7), 0 0 2px rgba(0, 0, 0, .5); }
+.c-cover .cvL { text-shadow: 0 2px 18px rgba(0, 0, 0, .6), 0 0 2px rgba(0, 0, 0, .35); }
+/* kapanışta donan kare: motorun V.vignette katmanları (yüz çerçevesinin içinde) aynen */
+#freeze .c-freeze::after { content: ""; position: absolute; inset: 0; pointer-events: none; background-image:
+  linear-gradient(180deg, rgba(5,8,14,.66) 0%, rgba(5,8,14,.33) 15.3%, rgba(5,8,14,0) 34%),
+  linear-gradient(0deg, rgba(5,8,14,.5) 0%, rgba(5,8,14,.25) 13.5%, rgba(5,8,14,0) 30%),
+  radial-gradient(125% 85% at 50% 44%, rgba(5,8,14,0) 52%, rgba(5,8,14,.42) 100%); }
+/* alt bant plakası biraz daha koyu (el/mikrofon parlaklığında da okunsun) */
+.c-lt .ltPlate { background: linear-gradient(90deg, rgba(7,12,21,.8) 0%, rgba(7,12,21,.66) 62%, rgba(7,12,21,0) 100%); }

@@ -1,0 +1,10 @@
+/* viral-sayi-kancasi */
+/* takip kartı: profil logosu avatar dairesini tam doldurur (Instagram profil fotoğrafı gibi; ince marka halkası, iç boşluk yok) */
+.c-follow .avatar { padding: 6px; }
+.c-follow .avatar div { border: 0; background: #000; }
+.c-follow .avatar div img { display: block; width: 100% !important; height: 100% !important; object-fit: cover; border-radius: 50%; }
+.c-follow .igName { top: 236px; }
+/* dikey telefon videosu: fare imleci eli yerine L.touch parmak dokunuşu */
+.c-follow .hand { display: none !important; }
+/* butonun kendi dalgası avatarın üstüne taşmasın: buton içinde kalsın (dokunma halkası L.touch'ta) */
+.c-follow .follow { overflow: hidden; }

@@ -1,0 +1,2 @@
+/* secki-reklami: taban görüntü motorun yüz katmanında değil, PR.frameCard'da (tam ekran, vuruş yakınlaşması, 1x1 odak) çizilir */
+#faceWrap { visibility: hidden; }

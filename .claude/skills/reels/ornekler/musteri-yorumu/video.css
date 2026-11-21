@@ -1,0 +1,3 @@
+/* musteri-yorumu: konuşan kafa motorun yüz katmanında değil, PR.frameCard (anchor: yüz takibiyle çene sabit) ile çizilir;
+   yüz reklam bölgesine çıkar, altyazı göğüs hizasında y <= 1240'ta kalır. Motor altyazıyı çizer (PR.capStyle görünümü). */
+#faceWrap { visibility: hidden; }

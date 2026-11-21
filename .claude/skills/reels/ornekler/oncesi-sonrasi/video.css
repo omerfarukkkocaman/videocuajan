@@ -1,0 +1,3 @@
+/* oncesi-sonrasi: klip motorun yüz katmanında değil, çerçeveli kartta (comp/premium.js PR.frameCard) çizilir */
+#faceWrap { visibility: hidden; }
+#stage { background: #EADBC8; }

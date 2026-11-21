@@ -1,0 +1,14 @@
+/* derinlik-studyo — derinlik / stüdyo */
+/* benchmark başlığı (arkada, üst bantta) */
+.yzHead { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; white-space: nowrap; }
+.yzHead b { font-weight: 900; font-size: 42px; color: #fff; letter-spacing: -.01em; text-shadow: 0 4px 18px rgba(0,0,0,.55); }
+.yzHead span { font-weight: 700; font-size: 28px; color: #9FB3CF; }
+/* takip kartı: profil logosu avatar dairesini tam doldurur (Instagram profil fotoğrafı gibi), el yerine L.touch */
+.c-follow .avatar { padding: 6px; }
+.c-follow .avatar div { border: 0; background: #000; }
+.c-follow .avatar div img { display: block; width: 100% !important; height: 100% !important; object-fit: cover; border-radius: 50%; }
+.c-follow .igName { top: 236px; }
+.c-follow .hand { display: none !important; }
+.c-follow .follow { overflow: hidden; }
+/* kanca: AYNI PROMPT satır kutusu harflere otursun (satır arası .9; konum HOOK.top/gap ile aynı tutuldu) */
+#hook .c-head, #outro .c-head { line-height: .9; }

@@ -1,0 +1,67 @@
+{
+ "base": {
+  "kind": "montage",
+  "clips": [
+   {
+    "from": "start",
+    "to": {
+     "word": 10,
+     "off": -0.2
+    },
+    "clip": "pencere",
+    "in": 0.5,
+    "move": "push-in"
+   },
+   {
+    "to": {
+     "word": 18
+    },
+    "clip": "ofis",
+    "in": 0.0,
+    "move": "pan-left"
+   },
+   {
+    "to": {
+     "word": 24,
+     "off": -0.2
+    },
+    "clip": "duvar",
+    "in": 0.0,
+    "move": "pull-out"
+   },
+   {
+    "to": {
+     "word": 33
+    },
+    "clip": "hdr-klip",
+    "in": 0.0,
+    "move": "push-in",
+    "fade": 0.2
+   },
+   {
+    "to": {
+     "word": 46
+    },
+    "clip": "sokak",
+    "in": 0.0,
+    "move": "static"
+   },
+   {
+    "to": {
+     "word": 50,
+     "off": -0.2
+    },
+    "clip": "duvar",
+    "in": 3.5,
+    "move": "push-in"
+   },
+   {
+    "to": "end",
+    "clip": "ofis",
+    "in": 0.1,
+    "move": "pan-right"
+   }
+  ]
+ },
+ "_not": "montaj plan.json örneği: klipler start..end boşluksuz döşenir; 'from' yazılmazsa bir önceki klibin 'to'su kullanılır (zincirleme)."
+}

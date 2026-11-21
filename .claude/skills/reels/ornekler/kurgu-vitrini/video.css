@@ -1,0 +1,13 @@
+/* kurgu-vitrini */
+/* takip kartı: profil logosu avatar dairesini tam doldurur (Instagram profil fotoğrafı gibi; ince marka halkası, iç boşluk yok) */
+.c-follow .avatar { padding: 6px; }
+.c-follow .avatar div { border: 0; background: #000; }
+.c-follow .avatar div img { display: block; width: 100% !important; height: 100% !important; object-fit: cover; border-radius: 50%; }
+.c-follow .igName { top: 236px; }
+/* dikey telefon videosu: fare imleci eli yerine L.touch parmak dokunuşu */
+.c-follow .hand { display: none !important; }
+/* proje dokümanı: başlık yazısı yerine koyu başlık çubuğu (altyazıyı tekrar etmez) */
+#h1 .c-paper .pLines i:first-child, #mdSrc .c-paper .pLines i:first-child {
+  height: 30px !important; width: 62% !important; border-radius: 9px !important; background: var(--brand) !important; margin-bottom: 12px; }
+/* butonun kendi dalgası avatarın üstüne yarım ay gibi taşmasın: buton içinde kalsın (dokunma halkası L.touch'ta) */
+.c-follow .follow { overflow: hidden; }

@@ -1,0 +1,25 @@
+{
+ "name": "Örnek Marka",
+ "handle": "ornekmarka",
+ "url": "ornekmarka.com",
+ "tagline": "Fikirden videoya, adım adım.",
+ "about": "Öğrencilerin denemesi için hayalî örnek marka. Kendi markan için: ./studyo py - pipeline/brand.py <marka> <logo.png>",
+ "colors": {
+  "navy": "#0B1F33",
+  "brand": "#0B3568",
+  "blue": "#2F6BFF",
+  "sky": "#5DB3F0",
+  "yellow": "#FFD23F",
+  "red": "#E5383B",
+  "green": "#1FB766",
+  "ink": "#111827",
+  "muted": "#64748B"
+ },
+ "logo": {
+  "dark": "logo-dark.png",
+  "light": "logo-light.png",
+  "mark": "logo-mark.png"
+ },
+ "source": "Hayalî örnek marka; logo kodla üretildi.",
+ "logo_ar": 0.3027
+}

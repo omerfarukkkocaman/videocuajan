@@ -1,0 +1,41 @@
+{
+ "_not": "Format profilleri. 9x16 değerleri stil 2 motorunun sabitleriyle birebir aynıdır (regresyon). Dikdörtgenler {x,y,w,h,r,ay,corners}; 'stage' = tüm tuval. full: kaynak yönüne göre (v: dikey çekim, h: yatay çekim). regions: [x,y,w,h] grafik bölgeleri.",
+ "9x16": {
+  "W": 1080, "H": 1920,
+  "safe": {"x0": 70, "x1": 1010, "y0": 250, "y1": 1500, "no": [{"x0": 930, "y0": 1000, "x1": 1080, "y1": 1720}]},
+  "full": {"v": "stage", "h": "stage"},
+  "card": {"x": 120, "y": 780, "w": 840, "h": 1140, "r": 44, "ay": 300, "corners": "top"},
+  "rise": 1960,
+  "cap": {"cx": 540, "y": 1395, "yCard": 1395, "box": 780, "fs": 58, "fsMin": 42},
+  "regions": {"hook": [70, 250, 940, 650], "gfx.full": [70, 250, 940, 300], "gfx.card": [70, 250, 940, 490],
+              "gfx.hidden": [70, 250, 940, 1050], "cap": [150, 1300, 780, 200]},
+  "end": null,
+  "micro": ["below", "above", "right", "left"]
+ },
+ "1x1": {
+  "W": 1080, "H": 1080,
+  "safe": {"x0": 60, "x1": 1020, "y0": 60, "y1": 1020, "no": []},
+  "full": {"v": "stage", "h": "stage"},
+  "card": {"x": 580, "y": 80, "w": 440, "h": 1000, "r": 40, "ay": 200, "corners": "top"},
+  "rise": 1120,
+  "cap": {"cx": 540, "y": 935, "yCard": 935, "box": 860, "fs": 50, "fsMin": 38},
+  "regions": {"hook": [60, 80, 500, 700], "gfx.full": [60, 60, 960, 200], "gfx.full.left": [60, 60, 300, 780],
+              "gfx.full.right": [720, 60, 300, 780], "gfx.card": [60, 80, 500, 760],
+              "gfx.hidden": [60, 60, 960, 800], "cap": [110, 860, 860, 150]},
+  "end": {"x": 540, "y": 540, "logoTop": 360, "logoW": 560, "urlTop": 560, "tagTop": 640},
+  "micro": ["right", "left", "above", "below"]
+ },
+ "16x9": {
+  "W": 1920, "H": 1080,
+  "safe": {"x0": 96, "x1": 1824, "y0": 54, "y1": 960, "no": []},
+  "full": {"v": {"x": 656, "y": 0, "w": 608, "h": 1080, "r": 0, "corners": "all", "ay": 540}, "h": "stage"},
+  "backdrop": "blur",
+  "card": {"x": 1250, "y": 80, "w": 560, "h": 1000, "r": 40, "ay": 200, "corners": "top"},
+  "rise": 1120,
+  "cap": {"cx": 960, "y": 880, "yCard": 880, "box": 1100, "fs": 52, "fsMin": 40},
+  "regions": {"hook": [96, 80, 520, 760], "gfx.full.left": [96, 60, 520, 760], "gfx.full.right": [1304, 60, 520, 760],
+              "gfx.card": [96, 60, 1100, 740], "gfx.hidden": [96, 60, 1728, 740], "cap": [410, 800, 1100, 160]},
+  "end": {"x": 960, "y": 540, "logoTop": 330, "logoW": 640, "urlTop": 560, "tagTop": 650},
+  "micro": ["left", "right", "above"]
+ }
+}

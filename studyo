@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Stüdyo başlatıcısı (Mac Terminal ve Windows Git Bash'te aynı): ./studyo <komut> ...   (komutlar: ./studyo yardim)
+D="$(cd "$(dirname "$0")" && pwd)"
+# yeni kurulan araçlar bu oturumun PATH'inde olmayabilir: bilinen yerleri ekle
+for p in "$HOME/.local/bin" "$HOME/.cargo/bin" /opt/homebrew/bin /usr/local/bin "$D/.araclar/bin" \
+         "${LOCALAPPDATA:-/nonexistent}/Microsoft/WinGet/Links" "/c/Program Files/nodejs" "${APPDATA:-/nonexistent}/npm"; do
+  [ -d "$p" ] && case ":$PATH:" in *":$p:"*) ;; *) PATH="$p:$PATH";; esac
+done
+export PATH
+for py in "$D/.venv/bin/python" "$D/.venv/Scripts/python.exe"; do
+  [ -x "$py" ] && exec "$py" "$D/studyo.py" "$@"
+done
+if command -v uv >/dev/null 2>&1; then exec uv run --no-project --python 3.12 "$D/studyo.py" "$@"; fi
+for py in python3 python; do
+  if command -v "$py" >/dev/null 2>&1 && "$py" -c "import sys; sys.exit(sys.version_info < (3, 10))" >/dev/null 2>&1; then
+    exec "$py" "$D/studyo.py" "$@"
+  fi
+done
+echo "Python bulunamadı. Önce kurulum betiğini çalıştır: Mac: bash kurulum/kur_mac.sh  |  Windows: powershell -ExecutionPolicy Bypass -File kurulum/kur_windows.ps1"
+exit 1
