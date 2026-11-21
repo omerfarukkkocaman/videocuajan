@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Mac sistem araçları: Xcode komut satırı araçları (git, swiftc), Homebrew, ffmpeg, Node.js, uv (Python yöneticisi).
 # Sonra: ./studyo kur <animasyon|temel|maske>
-# Şifre isteyen adımlar (Homebrew kurulumu) Claude Code içinden yapılamaz: betik bunu söyler, kullanıcı Terminal'de bir kez çalıştırır.
+# Şifre isteyen tek adım (Homebrew): betik Terminal penceresini komut yazılı açar, kullanıcı yalnız şifresini girer.
 set -u
 ok() { printf '  ✔ %s\n' "$1"; }; no() { printf '  ✘ %s\n' "$1"; }
 echo "== Mac kurulumu =="
@@ -12,9 +12,13 @@ fi
 ok "Xcode komut satırı araçları"
 for p in /opt/homebrew/bin /usr/local/bin "$HOME/.local/bin"; do [ -d "$p" ] && PATH="$p:$PATH"; done
 if ! command -v brew >/dev/null 2>&1; then
-  no "Homebrew yok. Terminal uygulamasını aç, şunu yapıştır, şifreni gir (bir kez):"
-  echo '     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
-  echo "   Bitince Claude Code'a 'kurdum' de; kurulum kaldığı yerden devam eder."
+  # Homebrew şifre ister; Claude Code içinden şifre girilemez. Terminal penceresini komut yazılı hâlde açıyoruz:
+  # kullanıcı yalnız Mac şifresini yazıp Enter'a basar (yazarken görünmez), "Press RETURN" derse bir kez daha Enter.
+  no "Homebrew yok -> Terminal penceresi açılıyor. Oraya Mac şifreni yaz (yazarken görünmez) ve Enter'a bas."
+  osascript -e 'tell application "Terminal" to activate' \
+            -e 'tell application "Terminal" to do script "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"; echo; echo BITTI - bu pencereyi kapatabilirsin"' >/dev/null 2>&1 \
+    || echo '   Terminal açılamadı. Terminal uygulamasına şunu yapıştır: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+  echo "   Terminal'de 'BITTI' yazısı çıkınca Claude Code'a 'bitti' yaz; kurulum kaldığı yerden devam eder."
   exit 3
 fi
 ok "Homebrew"

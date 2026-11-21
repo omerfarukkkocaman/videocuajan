@@ -11,30 +11,34 @@ Ne yapabilir?
 
 Müzik ve efektler koddan sentezlenir, telif sorunu çıkmaz. Ücretli bir servis ya da API anahtarı gerekmez.
 
-## Kurulum: tek prompt
+## Kurulum (terminal bilgisi gerekmez)
 
-Gerekenler: [Claude Code](https://claude.com/claude-code) kurulu olmalı. Windows'ta Claude Code kurulurken Git for Windows da kurulur, o yeterli.
+**Bir kez yapılacaklar:**
+1. [VS Code](https://code.visualstudio.com) kur.
+2. VS Code'da sol menüden **Eklentiler** (Extensions) → "Claude Code" ara → Anthropic'in eklentisini **Install** et, Claude hesabınla giriş yap (Pro veya üstü abonelik).
+3. Windows'ta ayrıca [Git](https://git-scm.com/download/win) kur (hep "Next").
 
-Claude Code'u herhangi bir klasörde aç ve şunu yapıştır:
+**Stüdyoyu kur:**
+1. VS Code → **Dosya → Klasör Aç** (File → Open Folder) → ana klasörüne git → **Yeni Klasör**: `videocuajan` → içine gir → **Aç**.
+   (Windows'ta Masaüstü ya da Belgeler OneDrive'a bağlıysa oraya açma: `C:\Users\<adın>` içine aç.)
+2. Sağ üstteki Claude simgesine tıklayıp Claude Code panelini aç, şu mesajı yapıştır:
 
 ```
-https://github.com/omerfarukkkocaman/videocuajan reposunu ana klasörüme (~/videocuajan) klonla,
-içindeki KURULUM.md dosyasını oku ve adımları benimle birlikte uygula.
+https://github.com/omerfarukkkocaman/videocuajan adresindeki video stüdyosunu bu klasöre kur.
+Önce repoyu buraya indir, sonra içindeki KURULUM.md dosyasını oku ve oradaki adımları uygula.
+Ben terminal bilmiyorum: her şeyi sen yap, benim bir şey yapmam gerekirse bana tek tek ve basitçe söyle.
 ```
 
-Claude sana birkaç soru sorar, gereken araçları (ffmpeg, Node.js, Python paketleri) kurar ve sonunda şunu söyler:
-
-```
-cd ~/videocuajan && claude
-```
-
-Claude Code o klasörde açılınca yalnızca şunu yaz:
+3. Claude izin isteyince **Evet/Yes** de, soru sorarsa cevapla. Mac'te bir kez Terminal penceresi açılıp şifre ister, Windows'ta "izin verilsin mi?" penceresi çıkar. Kurulum 10–20 dakika sürer.
+4. Bitince Claude panelinde **yeni sohbet (+)** aç ve yaz:
 
 ```
 /basla
 ```
 
 Claude "Bugün ne yapmak istiyorsun?" diye sorar, dosyalarını koyacağın klasörü açar ve videonu üretir.
+
+**Sonraki seferler:** VS Code → Dosya → Son Kullanılanlar → `videocuajan` → Claude paneli → `/basla`.
 
 ## Komutlar (Claude bunları kendisi çalıştırır)
 

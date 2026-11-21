@@ -1,6 +1,6 @@
 # Kurulum (ihtiyaca göre)
 
-Amaç: kullanıcının işi için **gereken en az** parçayı kurmak. Her adımdan önce ne kurulacağını ve yaklaşık süresini söyle; şifre/izin penceresi çıkacaksa önceden haber ver.
+Amaç: kullanıcının işi için **gereken en az** parçayı kurmak. Kullanıcı terminal bilmiyor: her şeyi sen yap, ondan yalnız tıklama/şifre/onay iste. Her adımdan önce ne kurulacağını ve yaklaşık süresini söyle; şifre/izin penceresi çıkacaksa önceden haber ver.
 
 ## 0. Sistemi tanı
 `./studyo doktor` → Sistem satırı (Darwin = Mac, Windows) ve eksikler.
@@ -10,7 +10,7 @@ Amaç: kullanıcının işi için **gereken en az** parçayı kurmak. Her adımd
 ## 1. Sistem araçları (ffmpeg, Node.js, uv)
 - **Mac:** `bash kurulum/kur_mac.sh`
   - Çıkış 2: Xcode komut satırı araçları penceresi açıldı → kullanıcı "Yükle"ye basar, bitince tekrar çalıştır.
-  - Çıkış 3: Homebrew yok → betiğin yazdığı tek satırı kullanıcı **Terminal uygulamasında** çalıştırmalı (şifre ister; Claude Code içinden şifre girilemez). "Kurdum" deyince betiği tekrar çalıştır.
+  - Çıkış 3: Homebrew yok → betik Terminal penceresini komut yazılı açar; kullanıcı yalnız Mac şifresini yazıp Enter'a basar (yazarken görünmez), "Press RETURN" çıkarsa bir Enter daha, sonunda BITTI yazar. Ayrıntılı söyleyiş KURULUM.md §3'te. "bitti" deyince betiği tekrar çalıştır.
 - **Windows:** `powershell -ExecutionPolicy Bypass -File kurulum/kur_windows.ps1`
   - Node.js kurulurken "Bu uygulamanın değişiklik yapmasına izin verilsin mi?" penceresi çıkabilir → "Evet".
   - Çıkış 3 (araç görünmüyor): PATH bu oturumda yenilenmemiştir. Önce `./studyo doktor` dene (başlatıcı bilinen yolları ekler); yine yoksa kullanıcıdan Claude Code'u kapatıp açmasını iste.
